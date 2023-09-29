@@ -77,4 +77,11 @@ def random_sub_class(randomclass): # you'll need to use random class return valu
     random_sub_gen = subclass_pool[pointer][random_sub_num]
     return random_sub_gen
 
+def random_race():
+    """
+    Generates a random race for the character
+    """
+    standard_races = ['Dragonborn', 'Dwarf', 'Elf Gnome', 'Half-Elf', 'Half-Orc', 'Halfling', 'Human', 'Tiefling']
+    custom_race = ['Custom Lineage']
+    exotic_lineages = []
 
