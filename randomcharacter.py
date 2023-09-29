@@ -66,4 +66,8 @@ def random_sub_class(randomclass): # you'll need to use random class return valu
     if randomclass == "Warlock":
         subclass_pool = ['Archfey', 'Celestial', 'Fathomless', 'Fiend', 'The Genie', 'Great Old One', 'Hexblade', 'Undead', 'Undying']
 
-    
+    if randomclass == "Wizard":
+        subclass_pool = ['School of Abjuration', 'School of Bladesinging', 'School of Chronurgy', 'School of Conjuration', 
+                         'School of Divination', 'School of Enchantment', 'School of Evocation', 'School of Graviturgy', 
+                         'School of Illusion', 'School of Necromancy', 'Order of Scribes', 'School of Transmutation',
+                         'School of War Magic']
