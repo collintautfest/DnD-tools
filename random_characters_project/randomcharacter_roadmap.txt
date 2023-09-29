@@ -1,10 +1,10 @@
 Not implemented:
 - subrace
-- class level
 - multiclass possibility
 - characteristics and appearances
 
 In progress:
+- class level
 
 Completed:
 - classes

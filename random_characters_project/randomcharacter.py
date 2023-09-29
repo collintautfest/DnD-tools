@@ -94,3 +94,7 @@ def random_race():
                         'Naga', 'Siren', 'Vampire', 'Dhamphir', 'Hexblood', 'Reborn', 'Loxodon', 'Simic Hybrid', 'Vedalken',
                         'Astral Elf', 'Autognome', 'Giff', 'Hadozee', 'Plasmoid', 'Thri-kreen']
 
+def get_random_level():
+    """
+    Generates a random level for the character
+    """
