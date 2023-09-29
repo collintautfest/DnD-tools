@@ -83,5 +83,11 @@ def random_race():
     """
     standard_races = ['Dragonborn', 'Dwarf', 'Elf Gnome', 'Half-Elf', 'Half-Orc', 'Halfling', 'Human', 'Tiefling']
     custom_race = ['Custom Lineage']
-    exotic_lineages = []
+    exotic_lineages = ['Aarakocra', 'Aasimar', 'Changeling', 'Deep Gnome', 'Duergar', 'Eladrin', 
+                       'Fairy', 'Firbolg', 'Genasi (Air)', 'Genasi (Earth)', 'Genasi (Fire)', 'Genasi (Water)',
+                       'Githyanki', 'Githzerai', 'Goliath', 'Harengon', 'Kenku', 'Locathah', 'Owlin', 'Satyr', 'Sea Elf',
+                       'Shadar-Kai', 'Tabaxi', 'Tortle', 'Triton', 'Verdan']
+    monstrous_lineages = ['Bugbear', 'Centaur', 'Goblin', 'Grung', 'Hobgoblin', 'Kobold', 'Lizardfolk', 'Minotaur',
+                          'Orc', 'Shifter', 'Yuan-Ti']
+    setting_lineages = []
 
