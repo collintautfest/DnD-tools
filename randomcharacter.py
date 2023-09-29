@@ -43,4 +43,17 @@ def random_sub_class(randomclass): # you'll need to use random class return valu
                          'Psi Warrior', 'Rune Knight', 'Samurai']
     
     if randomclass == 'Monk':
-        subclass_pool = []
+        subclass_pool = ['Way of Mercy', 'Way of the Ascendant Dragon', 'Way of the Astral Self', 'Way of the Drunken Master', 
+                         'Way of the Four Elements', 'Way of the Kensei', 'Way of the Long Death', 'Way of the Open Hand', 
+                         'Way of Shadow', 'Way of the Sun Soul']
+        
+    if randomclass == 'Paladin':
+        subclass_pool = ['Oath of the Ancients', 'Oath of Conquest', 'Oath of the Crown', 'Oath of Devotion', 'Oath of Glory',
+                         'Oath of Redemption', 'Oath of Vengeance', 'Oath of the Watchers', 'Oathbreaker']
+        
+    if randomclass == 'Ranger':
+        subclass_pool = ['Beast Master Conclave', 'Drakewarden', 'Fey Wanderer', 'Gloom Stalker Conclave', 'Horizon Walker Conclave', 
+                         'Hunter Conclave', 'Monster Slayer Conclave', 'Swarmkeeper']
+    
+    if randomclass == 'Rogue':
+        sublcass_pool = []
