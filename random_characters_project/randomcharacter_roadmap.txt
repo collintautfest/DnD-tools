@@ -2,6 +2,11 @@ Not implemented:
 - subrace
 - multiclass possibility
 - characteristics and appearances
+- These might get built in a different project
+    - level up system
+    - abilities
+    - spells
+    - manual character building?
 
 In progress:
 - class level
