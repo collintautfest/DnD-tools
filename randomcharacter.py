@@ -82,6 +82,7 @@ def random_race():
     Generates a random race for the character
     """
     standard_races = ['Dragonborn', 'Dwarf', 'Elf Gnome', 'Half-Elf', 'Half-Orc', 'Halfling', 'Human', 'Tiefling']
+    # you need to incorporate sub races
     custom_race = ['Custom Lineage']
     exotic_lineages = ['Aarakocra', 'Aasimar', 'Changeling', 'Deep Gnome', 'Duergar', 'Eladrin', 
                        'Fairy', 'Firbolg', 'Genasi (Air)', 'Genasi (Earth)', 'Genasi (Fire)', 'Genasi (Water)',
@@ -89,5 +90,7 @@ def random_race():
                        'Shadar-Kai', 'Tabaxi', 'Tortle', 'Triton', 'Verdan']
     monstrous_lineages = ['Bugbear', 'Centaur', 'Goblin', 'Grung', 'Hobgoblin', 'Kobold', 'Lizardfolk', 'Minotaur',
                           'Orc', 'Shifter', 'Yuan-Ti']
-    setting_lineages = []
+    setting_lineages = ['Kender', 'Kalashtar', 'Warforged', 'Aetherborn', 'Aven', 'Khenra', 'Kor', 'Merfolk',
+                        'Naga', 'Siren', 'Vampire', 'Dhamphir', 'Hexblood', 'Reborn', 'Loxodon', 'Simic Hybrid', 'Vedalken',
+                        'Astral Elf', 'Autognome', 'Giff', 'Hadozee', 'Plasmoid', 'Thri-kreen']
 
