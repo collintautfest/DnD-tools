@@ -71,3 +71,7 @@ def random_sub_class(randomclass): # you'll need to use random class return valu
                          'School of Divination', 'School of Enchantment', 'School of Evocation', 'School of Graviturgy', 
                          'School of Illusion', 'School of Necromancy', 'Order of Scribes', 'School of Transmutation',
                          'School of War Magic']
+        
+    random_sub_num = random.randint(0, len(subclass_pool)-1)
+    random_sub_gen = subclass_pool[random_sub_num]
+    return random_sub_gen
