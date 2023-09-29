@@ -56,4 +56,14 @@ def random_sub_class(randomclass): # you'll need to use random class return valu
                          'Hunter Conclave', 'Monster Slayer Conclave', 'Swarmkeeper']
     
     if randomclass == 'Rogue':
-        sublcass_pool = []
+        sublcass_pool = ['Arcane Trickster', 'Assassin', 'Inquisitive', 'Mastermind', 'Phantom', 'Scout', 'Soulknife',
+                         'Swashbuckler', 'Thief']
+        
+    if randomclass == 'Sorcerer':
+        subclass_pool = ['Aberrant Mind', 'Clockwork Soul', 'Draconic Bloodline', 'Divine Soul', 'Lunar Sorcery', 'Shadow Magic', 
+                         'Storm Sorcery', 'Storm Sorcery']
+    
+    if randomclass == "Warlock":
+        subclass_pool = ['Archfey', 'Celestial', 'Fathomless', 'Fiend', 'The Genie', 'Great Old One', 'Hexblade', 'Undead', 'Undying']
+
+    
