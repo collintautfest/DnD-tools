@@ -80,25 +80,37 @@ def random_race():
     setting_lineages = ['Kender', 'Kalashtar', 'Warforged', 'Aetherborn', 'Aven', 'Khenra', 'Kor', 'Merfolk',
                         'Naga', 'Siren', 'Vampire', 'Dhamphir', 'Hexblood', 'Reborn', 'Loxodon', 'Simic Hybrid', 'Vedalken',
                         'Astral Elf', 'Autognome', 'Giff', 'Hadozee', 'Plasmoid', 'Thri-kreen']
-    randracelist = random.randint(0, 4)
+    randracelist = random.randint(0, 3)
     if randracelist == 0:
-        lst = standard_races
+        lst = standard_races + custom_race
     if randracelist == 1:
         lst = exotic_lineages
     if randracelist == 2:
         lst = monstrous_lineages
     if randracelist == 3:
-        lst = monstrous_lineages
-    if randracelist == 4:
         lst = setting_lineages
     rand_race = random.randint(0, len(lst)-1)
 
     return lst[rand_race]
 
+def random_background():
+    background_pool = ['Acolyte','Anthropologist','Archaeologist', 'Athlete', 'Charlatan','City Watch', 'Clan Crafter', 'Cloistered Scholar',
+                       'Courtier', 'Criminal', 'Entertainer', 'Faceless', 'Faction Agent', 'Far Traveler', 'Feylost', 'Fisher', 'Folk Hero',
+                       'Gladiator', 'Guild Artisan', 'Guild Merchant', 'Haunted One', 'Hermit', 'House Agent', 'Inheritor', 'Investigator',
+                       'Knight', 'Knight of the Order', 'Marine', 'Mercenary Veteran', 'Noble', 'Outlander', 'Pirate', 'Sage', 'Sailor',
+                       'Shipwright', 'Smuggler', 'Soldier', 'Spy', 'Urban Bounty Hunter', 'Urchin', 'Uthgardt Tribe Member', 'Waterdhavian Noble',
+                       'Witchlight Hand']
+    randum = random.randint(0, len(background_pool)-1)
+    return background_pool[randum]
+
 def main():
     randomclass = random_class()
     subclass = random_sub_class(randomclass)
     race = random_race()
-    print('Random character idea: ' + str(subclass) + " " + str(randomclass) + " " + str(race))
+    print('Class: ' + str(randomclass))
+    print('Subclass: ' + str(subclass))
+    print('Level: ' + str(random.randint(1, 20)))
+    print('Race: ' + str(race))
+    print('Background: ' + random_background())
 
 main()
