@@ -54,10 +54,10 @@ def random_sub_class(randomclass): # you'll need to use random class return valu
     if randomclass == 'Sorcerer':
         pointer = 11
     
-    if randomclass == "Warlock":
+    if randomclass == 'Warlock':
         pointer = 12
 
-    if randomclass == "Wizard":
+    if randomclass == 'Wizard':
         pointer = 13
         
     random_sub_num = random.randint(0, len(subclass_pool[pointer])-1)
@@ -68,7 +68,7 @@ def random_race():
     """
     Generates a random race for the character
     """
-    standard_races = ['Dragonborn', 'Dwarf', 'Elf Gnome', 'Half-Elf', 'Half-Orc', 'Halfling', 'Human', 'Tiefling']
+    standard_races = ['Dragonborn', 'Dwarf', 'Elf',  'Gnome', 'Half-Elf', 'Half-Orc', 'Halfling', 'Human', 'Tiefling']
     # you need to incorporate sub races
     custom_race = ['Custom Lineage']
     exotic_lineages = ['Aarakocra', 'Aasimar', 'Changeling', 'Deep Gnome', 'Duergar', 'Eladrin', 
@@ -103,14 +103,30 @@ def random_background():
     randum = random.randint(0, len(background_pool)-1)
     return background_pool[randum]
 
+def random_gender():
+    # character gender function
+    ## Nonbinary and other genders can be added as needed, just add it to the pool
+    gender_pool = ['Male', 'Female', 'femboy (male)', 'tomboy (female)']
+    gendrand = random.randint(0, len(gender_pool)-1)
+    return gender_pool[gendrand]
+
+def random_color():
+    # using rgb until I can swap to hexcode
+   return 'rgb('+ str(random.randint(0, 255)) + ',' + str(random.randint(0, 255)) + ',' + str(random.randint(0,255)) + ')'
+
 def main():
     randomclass = random_class()
     subclass = random_sub_class(randomclass)
     race = random_race()
+    gender = random_gender()
+    color = random_color()
+    print('Gender: '+ str(gender))
     print('Class: ' + str(randomclass))
     print('Subclass: ' + str(subclass))
     print('Level: ' + str(random.randint(1, 20)))
     print('Race: ' + str(race))
     print('Background: ' + random_background())
+    print('Main Color: ' + str(color))
+
 
 main()
