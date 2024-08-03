@@ -1,6 +1,5 @@
 Not implemented:
 - subrace
-- backgrounds
 - multiclass possibility
 - characteristics and appearances
 - These might get built in a different project
@@ -10,10 +9,11 @@ Not implemented:
     - manual character building?
 
 In progress:
-- backgrounds
 - class level
 
 Completed:
 - classes
 - subclasses
 - races
+- backgrounds
+- main color theme
