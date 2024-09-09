@@ -131,19 +131,22 @@ def main():
 
     print('Would you like to save to txt? (y/n)')
     # add user input detection, and make it crash proof
-    # usinput = input()
-    file = open('/Users/Collin/Downloads/' + str(race) + ', ' + str(randomclass) + '.txt', 'wt')
-    sys.stdout = file
+    # additionally add a regen feature
+    usinput = input()
+    if (usinput == "y"):
+        file = open('/Users/Collin/Downloads/' + str(race) + ', ' + str(randomclass) + '.txt', 'wt')
+        sys.stdout = file
 
-    print('Gender: '+ str(gender))
-    print('Class: ' + str(randomclass))
-    print('Subclass: ' + str(subclass))
-    print('Level: ' + str(random.randint(1, 20)))
-    print('Race: ' + str(race))
-    print('Background: ' + random_background())
-    print('Main Color: ' + str(color))
-    print('savestate: ') # make all randoms instead reference an enumerated list, so that you can turn each item into a number to make a readable serial
-    file.close()
+        print('Gender: '+ str(gender))
+        print('Class: ' + str(randomclass))
+        print('Subclass: ' + str(subclass))
+        print('Level: ' + str(random.randint(1, 20)))
+        print('Race: ' + str(race))
+        print('Background: ' + random_background())
+        print('Main Color: ' + str(color))
+        print('savestate: ') # make all randoms instead reference an enumerated list, so that you can turn each item into a number to make a readable serial
+        file.close()
+    
 
 
 main()
