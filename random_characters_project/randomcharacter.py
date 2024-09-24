@@ -3,11 +3,15 @@ This program randomly generates a new character with a race, subclass, class, le
 '''
 import random
 import sys
+
+
 def random_class():
     """
     Generates a random class
     """
+    
     rand_class_pool = ['Artificer','Barbarian','Bard','Blood Hunter', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Warlock', 'Wizard']
+    global rand_class_num
     rand_class_num = random.randint(0, len(rand_class_pool)-1)
     char_class = rand_class_pool[rand_class_num]
     return char_class
@@ -60,7 +64,8 @@ def random_sub_class(randomclass): # you'll need to use random class return valu
 
     if randomclass == 'Wizard':
         pointer = 13
-        
+
+    global random_sub_num  
     random_sub_num = random.randint(0, len(subclass_pool[pointer])-1)
     random_sub_gen = subclass_pool[pointer][random_sub_num]
     return random_sub_gen
@@ -81,6 +86,7 @@ def random_race():
     setting_lineages = ['Kender', 'Kalashtar', 'Warforged', 'Aetherborn', 'Aven', 'Khenra', 'Kor', 'Merfolk',
                         'Naga', 'Siren', 'Vampire', 'Dhamphir', 'Hexblood', 'Reborn', 'Loxodon', 'Simic Hybrid', 'Vedalken',
                         'Astral Elf', 'Autognome', 'Giff', 'Hadozee', 'Plasmoid', 'Thri-kreen']
+    global randracelist
     randracelist = random.randint(0, 3)
     if randracelist == 0:
         lst = standard_races + custom_race
@@ -90,6 +96,7 @@ def random_race():
         lst = monstrous_lineages
     if randracelist == 3:
         lst = setting_lineages
+    global rand_race
     rand_race = random.randint(0, len(lst)-1)
 
     return lst[rand_race]
@@ -101,6 +108,7 @@ def random_background():
                        'Knight', 'Knight of the Order', 'Marine', 'Mercenary Veteran', 'Noble', 'Outlander', 'Pirate', 'Sage', 'Sailor',
                        'Shipwright', 'Smuggler', 'Soldier', 'Spy', 'Urban Bounty Hunter', 'Urchin', 'Uthgardt Tribe Member', 'Waterdhavian Noble',
                        'Witchlight Hand']
+    global randum
     randum = random.randint(0, len(background_pool)-1)
     return background_pool[randum]
 
@@ -108,6 +116,7 @@ def random_gender():
     # character gender function
     ## Nonbinary and other genders can be added as needed, just add it to the pool
     gender_pool = ['Male', 'Female', 'femboy (male)', 'tomboy (female)']
+    global gendrand
     gendrand = random.randint(0, len(gender_pool)-1)
     return gender_pool[gendrand]
 
@@ -128,6 +137,8 @@ def main():
     print('Race: ' + str(race))
     print('Background: ' + random_background())
     print('Main Color: ' + str(color))
+    print('savestate: '+ str(rand_class_num) + ' ' + str(random_sub_num) + ' ' + str(randracelist) + 
+          ' ' + str(rand_race) + ' ' + str(randum) + ' ' + str(gendrand))
 
     print('Would you like to save to txt? (y/n)')
     # add user input detection, and make it crash proof
@@ -144,7 +155,8 @@ def main():
         print('Race: ' + str(race))
         print('Background: ' + random_background())
         print('Main Color: ' + str(color))
-        print('savestate: ') # make all randoms instead reference an enumerated list, so that you can turn each item into a number to make a readable serial
+        print('savestate: '+ str(rand_class_num) + ' ' + str(random_sub_num) + ' ' + str(randracelist) + 
+              ' ' + str(rand_race) + ' ' + str(randum) + ' ' + str(gendrand)) 
         file.close()
     
 
