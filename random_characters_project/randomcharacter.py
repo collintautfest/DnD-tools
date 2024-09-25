@@ -115,7 +115,7 @@ def random_background():
 def random_gender():
     # character gender function
     ## Nonbinary and other genders can be added as needed, just add it to the pool
-    gender_pool = ['Male', 'Female', 'femboy (male)', 'tomboy (female)']
+    gender_pool = ['Male', 'Female', 'NonBinary']
     global gendrand
     gendrand = random.randint(0, len(gender_pool)-1)
     return gender_pool[gendrand]
