@@ -124,7 +124,8 @@ def random_color():
     # using rgb until I can swap to hexcode
    return 'rgb('+ str(random.randint(0, 255)) + ',' + str(random.randint(0, 255)) + ',' + str(random.randint(0,255)) + ')'
 
-def main():
+# Convert all this into a function so you can either call the generator or the reverse loader
+def gencall():
     randomclass = random_class()
     subclass = random_sub_class(randomclass)
     race = random_race()
@@ -145,19 +146,52 @@ def main():
     # additionally add a regen feature
     usinput = input()
     if (usinput == "y"):
-        file = open('/Users/Collin/Downloads/' + str(race) + ', ' + str(randomclass) + '.txt', 'wt')
-        sys.stdout = file
+        # Save the original stdout
+        original_stdout = sys.stdout
+        try:
+            # Open the file and redirect stdout
+            with open('/Users/Collin/Downloads/' + str(race) + ', ' + str(randomclass) + '.txt', 'wt') as file:
+                sys.stdout = file
+                print('Gender: '+ str(gender))
+                print('Class: ' + str(randomclass))
+                print('Subclass: ' + str(subclass))
+                print('Level: ' + str(random.randint(1, 20)))
+                print('Race: ' + str(race))
+                print('Background: ' + random_background())
+                print('Main Color: ' + str(color))
+                print('savestate: '+ str(rand_class_num) + ' ' + str(random_sub_num) + ' ' + str(randracelist) + 
+                      ' ' + str(rand_race) + ' ' + str(randum) + ' ' + str(gendrand)) 
+        finally:
+            # Restore stdout
+            sys.stdout = original_stdout
 
-        print('Gender: '+ str(gender))
-        print('Class: ' + str(randomclass))
-        print('Subclass: ' + str(subclass))
-        print('Level: ' + str(random.randint(1, 20)))
-        print('Race: ' + str(race))
-        print('Background: ' + random_background())
-        print('Main Color: ' + str(color))
-        print('savestate: '+ str(rand_class_num) + ' ' + str(random_sub_num) + ' ' + str(randracelist) + 
-              ' ' + str(rand_race) + ' ' + str(randum) + ' ' + str(gendrand)) 
-        file.close()
+
+def main():
+    while True:
+        try: 
+            print("====================================")
+            print("Which program would you like to run?")
+            print("1. Random Character Generator")
+            print("2. Save Loader")
+            print("3. Exit")
+            print("")
+            usinput = int(input())
+            if (usinput == 1):
+                gencall()
+            if (usinput == 2):
+                print("Enter savestate string:")
+            if (usinput == 3):
+                break
+            else:
+                print("Please enter a valid option (1 or 2).")
+                print("")
+                continue  # Retry the input if the user does not enter 1 or 2
+            break
+        except:
+            print("Invalid Input")
+            print("")
+    
+
     
 
 
