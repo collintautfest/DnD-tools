@@ -9,9 +9,9 @@ Not implemented:
     - manual character building?
 
 In progress:
-- class level
 
 Completed:
+- class level
 - classes
 - subclasses
 - races
